@@ -1,0 +1,18 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "name": "milk",
+      "description": "buy milk",
+      "createdAt": "12/12/12",
+      "editedAt": "11/11/13"
+    },
+    {
+      "id": 2,
+      "name": "bread",
+      "description": "buy bread",
+      "createdAt": "12/12/20",
+      "editedAt": "11/11/23"
+    }
+  ]
+}
