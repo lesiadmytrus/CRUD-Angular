@@ -4,12 +4,8 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { CreateTodoComponent } from './components/create-todo/create-todo.component';
 
 const routes: Routes = [
-  {
-    path: '', component: TodoListComponent
-  },
-  {
-    path: 'create', component: CreateTodoComponent
-  }
+  { path: '', component: TodoListComponent },
+  { path: 'create', component: CreateTodoComponent }
 ];
 
 @NgModule({
