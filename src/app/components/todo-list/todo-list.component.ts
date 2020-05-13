@@ -24,4 +24,11 @@ export class TodoListComponent implements OnInit {
       this.list = tasks;
     });
   }
+
+  deleteTodo(id: string) {
+    this.todoService.delete(id).subscribe(response => {
+      this.getAllTodo('');
+      alert('Successfully deleted');
+    });
+  }
 }
