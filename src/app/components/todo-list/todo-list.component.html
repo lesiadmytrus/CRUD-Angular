@@ -24,6 +24,18 @@
     <mat-cell *matCellDef="let todo">{{todo.editedAt}}</mat-cell>
   </ng-container>
 
+  <ng-container  matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+    <mat-cell *matCellDef="let todo">
+      <button mat-button color="primary" class="btn delete">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+      </button>
+      <button mat-button color="primary" class="btn edit">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+
   <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
 </mat-table>

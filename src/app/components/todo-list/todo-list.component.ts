@@ -8,7 +8,7 @@ import { Todo } from 'src/app/models/todo.model';
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent implements OnInit {
-  public tableColumns = ['id', 'name', 'description', 'created', 'edited'];
+  public tableColumns = ['id', 'name', 'description', 'created', 'edited', 'actions'];
   public list: Todo[] = [];
 
   constructor(
@@ -19,9 +19,9 @@ export class TodoListComponent implements OnInit {
     this.getAllTodo();
   }
 
-  getAllTodo() {
-    this.todoService.getAll().subscribe(task => {
-      this.list = task;
+  getAllTodo(query = '') {
+    this.todoService.getAll(query).subscribe(tasks => {
+      this.list = tasks;
     });
   }
 }
