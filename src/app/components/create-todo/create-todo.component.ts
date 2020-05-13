@@ -32,7 +32,6 @@ export class CreateTodoComponent implements OnInit {
   createTodo(task) {
     this.todoService.createToDo(task).subscribe(res => {
       alert('Your task added');
-      console.log(res);
     });
   }
 }
