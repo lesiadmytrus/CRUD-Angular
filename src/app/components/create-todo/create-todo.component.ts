@@ -21,11 +21,11 @@ export class CreateTodoComponent implements OnInit {
 
   createForm() {
     this.formGroup = this.formBuilder.group({
-      'id': [null],
-      'name': [null],
+      'id': [null, Validators.required],
+      'name': [null, Validators.required, Validators.minLength(2), Validators.maxLength(7)],
       'description': [null, [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
-      'created': [null],
-      'edited': [null]
+      'created': [null, Validators.required],
+      'edited': [null, Validators.required]
     });
   }
 
