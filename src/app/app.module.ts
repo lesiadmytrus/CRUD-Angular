@@ -14,11 +14,13 @@ import { MatInputModule,
 import { MatTableModule } from '@angular/material/table';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateTodoComponent } from './components/create-todo/create-todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent
+    TodoListComponent,
+    CreateTodoComponent
   ],
   imports: [
     BrowserModule,
