@@ -9,8 +9,8 @@ export class TodoService {
 
   constructor(private http: HttpClient) { }
 
-  public getAll(query: string): Observable<Todo[]> {
-    return this.http.get<Todo[]>(`${this.apiURL}${query}`);
+  public getAll(): Observable<Todo[]> {
+    return this.http.get<Todo[]>(`${this.apiURL}`);
   }
 
   public createToDo(todo: Todo): Observable<Object> {
