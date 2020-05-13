@@ -1,0 +1,31 @@
+<mat-table [dataSource]="list">
+  <ng-container >
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+      <mat-cell *matCellDef="let todo"></mat-cell>
+    </ng-container>
+
+    <ng-container  matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let todo"></mat-cell>
+    </ng-container>
+
+    <ng-container  matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+      <mat-cell *matCellDef="let todo"></mat-cell>
+    </ng-container>
+
+    <ng-container  matColumnDef="created">
+      <mat-header-cell *matHeaderCellDef>Created at</mat-header-cell>
+      <mat-cell *matCellDef="let todo"></mat-cell>
+    </ng-container>
+
+    <ng-container  matColumnDef="edited">
+      <mat-header-cell *matHeaderCellDef>Edited at</mat-header-cell>
+      <mat-cell *matCellDef="let todo"></mat-cell>
+    </ng-container>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
+</mat-table>
