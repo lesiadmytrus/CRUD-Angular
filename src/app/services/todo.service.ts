@@ -20,4 +20,12 @@ export class TodoService {
   public delete(id: string): Observable<Object> {
     return this.http.delete(`${this.apiURL}/${id}`);
   }
+
+  public getById(id: string): Observable<Todo> {
+    return this.http.get<Todo>(`${this.apiURL}/${id}`);
+  }
+
+  public update(task: Todo): Observable<Object> {
+    return this.http.put(`${this.apiURL}/${task.id}`, task);
+  }
 }
