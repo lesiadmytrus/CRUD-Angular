@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { TodoService } from 'src/app/services/todo.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'create-todo',
@@ -12,7 +13,8 @@ export class CreateTodoComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private todoService: TodoService
+    private todoService: TodoService,
+    private router: Router
   ){ }
 
   ngOnInit() {
@@ -31,7 +33,8 @@ export class CreateTodoComponent implements OnInit {
 
   createTodo(task) {
     this.todoService.createToDo(task).subscribe(res => {
-      alert('Your task added');
+      alert('Task added');
+      this.router.navigate(['']);
     });
   }
 }

@@ -16,12 +16,12 @@
 
   <ng-container  matColumnDef="created">
     <mat-header-cell *matHeaderCellDef>Created at</mat-header-cell>
-    <mat-cell *matCellDef="let todo">{{todo.createdAt}}</mat-cell>
+    <mat-cell *matCellDef="let todo">{{todo.created}}</mat-cell>
   </ng-container>
 
   <ng-container  matColumnDef="edited">
     <mat-header-cell *matHeaderCellDef>Edited at</mat-header-cell>
-    <mat-cell *matCellDef="let todo">{{todo.editedAt}}</mat-cell>
+    <mat-cell *matCellDef="let todo">{{todo.edited}}</mat-cell>
   </ng-container>
 
   <ng-container  matColumnDef="actions">
@@ -30,7 +30,7 @@
       <button mat-button color="primary" class="btn delete" (click)="deleteTodo(todo.id)">
         <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
       </button>
-      <button mat-button color="primary" class="btn edit">
+      <button mat-button color="primary" class="btn edit" (click)="update(todo.id, list)">
         <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
       </button>
     </mat-cell>
